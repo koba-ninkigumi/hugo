@@ -257,7 +257,7 @@ func NewTheme(cmd *cobra.Command, args []string) error {
 
 	archDefault := []byte("+++\n+++\n")
 
-	err := helpers.WriteToDisk(filepath.Join(createpath, "archetypes", "default.md"), bytes.NewReader(archDefault), hugofs.Source())
+	err = helpers.WriteToDisk(filepath.Join(createpath, "archetypes", "default.md"), bytes.NewReader(archDefault), hugofs.Source())
 	if err != nil {
 		return err
 	}
